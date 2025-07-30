@@ -31,10 +31,10 @@ public class ejecutor {
                     calcularPlanCliente(sc);
                     break;
                 case 4:
-                    System.out.println("Saliendo del sistema...");
+                    System.out.println("chao");
                     break;
                 default:
-                    System.out.println("Opción no válida!");
+                    System.out.println("Eeee esta mal");
             }
         } while (opcion != 4);
     }
@@ -89,12 +89,12 @@ public class ejecutor {
             return;
         }
 
-        // Mostrar datos del cliente
+        
         System.out.println("\nDatos del cliente:");
         System.out.println("Nombre: " + cliente.getNombre());
         System.out.println("Tipo de plan: " + cliente.getTipoPlan());
         
-        // Calcular plan según el tipo registrado
+       
         Plan plan = crearPlanSegunTipo(cliente.getTipoPlan(), sc);
         if (plan == null) {
             System.out.println("Tipo de plan no válido!");
@@ -117,7 +117,7 @@ public class ejecutor {
                 System.out.print("Minutos consumidos: "); double minutos = sc.nextDouble();
                 System.out.print("Costo por minuto: "); double costoMinuto = sc.nextDouble();
                 System.out.print("Tarifa base: "); int tarifaBase = sc.nextInt();
-                sc.nextLine(); // Limpiar buffer
+                sc.nextLine(); 
                 return new PlanPostPagoMinutos(minutos, costoMinuto, tarifaBase, 1);
                 
             case 2: // PostPago Megas
@@ -125,7 +125,7 @@ public class ejecutor {
                 System.out.print("Costo por minuto: "); double costoMin = sc.nextDouble();
                 System.out.print("Gigas consumidos: "); int gigas = sc.nextInt();
                 System.out.print("Costo por giga: "); double costoGiga = sc.nextDouble();
-                sc.nextLine(); // Limpiar buffer
+                sc.nextLine();
                 return new PlanPostPagoMegas(mins, costoMin, gigas, costoGiga, 2);
                 
             case 3: // PostPago Minutos y Megas
@@ -133,7 +133,7 @@ public class ejecutor {
                 System.out.print("Costo minuto nacional: "); double costoMinNac = sc.nextDouble();
                 System.out.print("Minutos internacionales: "); double minInt = sc.nextDouble();
                 System.out.print("Costo minuto internacional: "); double costoMinInt = sc.nextDouble();
-                sc.nextLine(); // Limpiar buffer
+                sc.nextLine(); 
                 return new PlanPostPagoMinutosMegas(minNac, costoMinNac, minInt, costoMinInt, 3);
                 
             case 4: // PostPago Minutos y Megas Económico
@@ -142,7 +142,7 @@ public class ejecutor {
                 System.out.print("Megas consumidos: "); double megasEco = sc.nextDouble();
                 System.out.print("Costo por giga: "); double costoGigaEco = sc.nextDouble();
                 System.out.print("Porcentaje descuento: "); double descuento = sc.nextDouble();
-                sc.nextLine(); // Limpiar buffer
+                sc.nextLine(); 
                 return new PlanPostPagoMinutosMegasEconomico(minEco, costoMinEco, megasEco, costoGigaEco, descuento, 4);
                 
             default:

@@ -7,6 +7,7 @@ public class PlanPostPagoMegas extends Plan{
     private int idPlan;
 
     public PlanPostPagoMegas(int minutos, double costoMinutos, int gigas, double costoGigas, int idPlan) {
+        this.tipoPlan = "PostPagoMegas";
         this.minutos = minutos;
         this.costoMinutos = costoMinutos;
         this.gigas = gigas;

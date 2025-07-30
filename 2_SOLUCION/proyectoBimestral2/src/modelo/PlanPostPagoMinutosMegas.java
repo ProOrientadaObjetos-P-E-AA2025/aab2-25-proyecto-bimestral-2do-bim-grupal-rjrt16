@@ -7,6 +7,7 @@ public class PlanPostPagoMinutosMegas extends Plan {
     private int idPlan;
 
     public PlanPostPagoMinutosMegas(double minutosNacionales, double costoMinutoNacional, double minutosInternacionales, double costoMinutoInternacional, int idPlan) {
+        this.tipoPlan = "PostPagoMinutosMegas";
         this.minutosNacionales = minutosNacionales;
         this.costoMinutoNacional = costoMinutoNacional;
         this.minutosInternacionales = minutosInternacionales;

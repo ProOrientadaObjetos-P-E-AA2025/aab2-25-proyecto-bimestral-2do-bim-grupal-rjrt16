@@ -8,7 +8,7 @@ import java.util.List;
 public class ClienteDAO {
 
     public static void insertarCliente(Cliente c) {
-        String sql = "INSERT INTO Cliente (nombre, cedula, ciudad, numeroCelular, marca, modelo, pagoMensual, edad, pais, tipoPlan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO cliente (nombre, cedula, ciudad, numeroCelular, marca, modelo, pagoMensual, edad, pais, tipoPlan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         Connection conn = null;
         try {
             conn = Conexion.conectar();
@@ -31,26 +31,24 @@ public class ClienteDAO {
         }
     }
 
-     public static List<Cliente> listarClientes() {
+    public static List<Cliente> listarClientes() {
         List<Cliente> lista = new ArrayList<>();
-        String sql = "SELECT nombre, cedula, ciudad, numeroCelular, marca, modelo, pagoMensual, edad, pais, tipoPlan FROM Cliente";
-        
-        try (Connection conn = Conexion.conectar();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-            
+        String sql = "SELECT nombre, cedula, ciudad, numeroCelular, marca, modelo, pagoMensual, edad, pais, tipoPlan FROM cliente";
+
+        try (Connection conn = Conexion.conectar(); Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+
             while (rs.next()) {
                 Cliente c = new Cliente(
-                    rs.getString("nombre"),
-                    rs.getString("cedula"),
-                    rs.getString("ciudad"),
-                    rs.getString("numeroCelular"),
-                    rs.getString("marca"),
-                    rs.getString("modelo"),
-                    rs.getDouble("pagoMensual"),
-                    rs.getInt("edad"),
-                    rs.getString("pais"),
-                    rs.getInt("tipoPlan")
+                        rs.getString("nombre"),
+                        rs.getString("cedula"),
+                        rs.getString("ciudad"),
+                        rs.getString("numeroCelular"),
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getDouble("pagoMensual"),
+                        rs.getInt("edad"),
+                        rs.getString("pais"),
+                        rs.getInt("tipoPlan")
                 );
                 lista.add(c);
             }
@@ -70,16 +68,16 @@ public class ClienteDAO {
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 return new Cliente(
-                    rs.getString("nombre"),
-                    rs.getString("cedula"),
-                    rs.getString("ciudad"),
-                    rs.getString("celular"),
-                    rs.getString("marca"),
-                    rs.getString("modelo"),
-                    rs.getDouble("pago"),
-                    rs.getInt("edad"),
-                    rs.getString("pais"),
-                    rs.getInt("tipoPlan")
+                        rs.getString("nombre"),
+                        rs.getString("cedula"),
+                        rs.getString("ciudad"),
+                        rs.getString("numeroCelular"),
+                        rs.getString("marca"),
+                        rs.getString("modelo"),
+                        rs.getDouble("pagoMensual"),
+                        rs.getInt("edad"),
+                        rs.getString("pais"),
+                        rs.getInt("tipoPlan")
                 );
             }
         } catch (SQLException e) {
@@ -91,7 +89,7 @@ public class ClienteDAO {
     }
 
     public static void actualizarCliente(Cliente c) {
-        String sql = "UPDATE cliente SET nombre=?, ciudad=?, celular=?, marca=?, modelo=?, pago=?, edad=?, pais=?, tipoPlan=? WHERE cedula=?";
+        String sql = "UPDATE cliente SET nombre=?, ciudad=?, numeroCelular=?, marca=?, modelo=?, pagoMensual=?, edad=?, pais=?, tipoPlan=? WHERE cedula=?";
         Connection conn = null;
         try {
             conn = Conexion.conectar();
