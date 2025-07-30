@@ -3,14 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/controlador/ClienteController.java</file>
             <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/modelo/ClienteDAO.java</file>
             <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/controlador/Conexion.java</file>
             <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/controlador/ejecutor.java</file>
+            <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/modelo/PlanPostPagoMinutosMegas.java</file>
             <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/controlador/main.java</file>
             <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/modelo/Cliente.java</file>
             <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/vista/InterfazClientes.java</file>
             <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/modelo/Plan.java</file>
             <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/modelo/PlanPostPagoMegas.java</file>
+            <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/modelo/PlanPostPagoMinutos.java</file>
+            <file>file:/D:/Poo/aab2-25-proyecto-bimestral-2do-bim-grupal-rjrt16/2_SOLUCION/proyectoBimestral2/src/modelo/PlanPostPagoMinutosMegasEconomico.java</file>
         </group>
     </open-files>
 </project-private>
